@@ -1,0 +1,42 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-02-13T22:52:09.386Z",
+        "line": 2,
+        "name": "This is our first scenario",
+        "description": "",
+        "id": "this-is-our-first-feature;this-is-our-first-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6000900,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "Navigate to the website: \"https://www.google.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.google.com\"",
+                  "offset": 25
+                }
+              ],
+              "location": "StepDefinitions.MyStepdefs.navigateToTheWebsite(java.lang.String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "This is our first Feature",
+    "description": "",
+    "id": "this-is-our-first-feature",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/test.feature",
+    "tags": []
+  }
+]
