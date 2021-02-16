@@ -2,6 +2,7 @@ Feature: Test Automation for page forms
 Background:
   Given Navigate to: "http://authenticgoods.co/wrapbootstrap/themes/neuboard-v1.4.3/Angular_full_version/#/forms/components"
 
+
 Scenario: Fill out Basic Form
   When  I will click on the email address field and enter keys, "test@test.com"
   Then I will click on password field and enter keys, "password1"
@@ -15,9 +16,12 @@ Scenario: Fill out field in Form Elements component
 
 
 Scenario: Click on dropdown box from Selects component
-  When I see the page
-  Then I will click on the Default select drop down
+  When I will click on the Default select drop down
+  Then I will click on option three from scroll
 
-Scenario: Click on Inline Radio button Option 3 from Custom Checkboxes and Radio component
-  When I see the page
-  Then I will click on Option 3 from the Inline Radio buttons
+
+Scenario: Click on buttons in Custom Check Boxes and Radio Component
+  When I see page I will click option three from Radio option
+  Then I will click option three in Inline Radio
+  Then I will click option three in Check Box
+  And I will click option three in Inline Check Box

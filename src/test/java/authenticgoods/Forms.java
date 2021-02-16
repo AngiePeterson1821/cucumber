@@ -43,6 +43,28 @@ public class Forms extends AuthBaseClass {
         By locator = By.id("inputError1");
         getElement(locator).sendKeys(value);
     }
-
-
+    public void defaultDrop(){
+        By locator = By.className("form-control");
+        getElement(locator).click();
+    }
+    public void optionThree(){
+        By locator = By.xpath("/html/body/section/section/div[1]/div/section/div[3]/div[1]/div/div[2]/div[4]/select/option[3]");
+        getElement(locator).click();
+    }
+    public void radioButton(){
+        By locator = By.xpath("/html/body/section/section/div[1]/div/section/div[3]/div[2]/div/div[2]/form/div[1]/div/div[3]/div/ins");
+        getElement(locator).click();
+    }
+    public void inlineRadio(){
+        By locator = By.xpath("/html/body/section/section/div[1]/div/section/div[3]/div[2]/div/div[2]/form/div[2]/div/label[3]/div/ins");
+        getElement(locator).click();
+    }
+    public void checkBox(){
+        By locator = By.xpath("/html/body/section/section/div[1]/div/section/div[3]/div[2]/div/div[2]/form/div[3]/div/div[3]/div/ins");
+        getElement(locator).click();
+    }
+    public void inlineCheckBox(){
+        By locator = By.xpath("/html/body/section/section/div[1]/div/section/div[3]/div[2]/div/div[2]/form/div[4]/div/label[3]/div/ins");
+        getElement(locator).click();
+    }
 }

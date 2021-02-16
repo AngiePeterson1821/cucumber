@@ -37,4 +37,8 @@ public class AuthBaseClass {
         driver.navigate().to(arg0);
     }
 
+    public void driverClose(){
+        driver.close();
+    }
+
 }

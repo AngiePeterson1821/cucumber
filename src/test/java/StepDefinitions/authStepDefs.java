@@ -1,6 +1,7 @@
 package StepDefinitions;
 
 import authenticgoods.Forms;
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -32,6 +33,10 @@ public class authStepDefs {
                 .withTimeout(20, TimeUnit.SECONDS)
                 .pollingEvery(5, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
+    }
+    @After
+    public void shutDownBrowser(){
+        forms.driverClose();
     }
 
 
@@ -73,4 +78,33 @@ public class authStepDefs {
     }
 
 
+    @When("I will click on the Default select drop down")
+    public void iWillClickOnTheDefaultSelectDropDown() {
+        forms.defaultDrop();
+    }
+
+    @Then("I will click on option three from scroll")
+    public void iWillClickOnOptionThreeFromScroll() {
+        forms.optionThree();
+    }
+
+    @When("I see page I will click option three from Radio option")
+    public void iSeePageIWillClickOptionThreeFromRadioOption() {
+        forms.radioButton();
+    }
+
+    @Then("I will click option three in Inline Radio")
+    public void iWillClickOptionThreeInInlineRadio() {
+        forms.inlineRadio();
+    }
+
+    @Then("I will click option three in Check Box")
+    public void iWillClickOptionThreeInCheckBox() {
+        forms.checkBox();
+    }
+
+    @And("I will click option three in Inline Check Box")
+    public void iWillClickOptionThreeInInlineCheckBox() {
+        forms.inlineCheckBox();
+    }
 }
