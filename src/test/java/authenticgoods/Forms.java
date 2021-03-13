@@ -1,14 +1,13 @@
 package authenticgoods;
-import StepDefinitions.AuthBaseClass;
+import authenticgoods.Navigation.Navigation;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
-import utils.LocalDriver;
 
 
-public class Forms extends AuthBaseClass {
-    WebDriver webDriver;
-    FluentWait<WebDriver> wait;
+public class Forms extends CommonStepDefBasePageObject {
+
+    Navigation navigation = new Navigation();
 
 
     public Forms() {
@@ -25,10 +24,12 @@ public class Forms extends AuthBaseClass {
     }
     public void attachTheFile(String arg0){
         By locator = By.id("exampleInputFile");
-        getElement(locator).sendKeys(arg0);
+        String path = System.getProperty("user.dir") + arg0;
+        System.out.println(path);
+        getElement(locator).sendKeys(path);
     }
     public void clickSubmit(){
-        By locator = By.className("btn btn-primary");
+        By locator = By.xpath("/html/body/section/section/div[1]/div/section/div[1]/div[1]/div/div[2]/form/button");
         getElement(locator).click();
     }
     public void inputSuccess(String value){
@@ -66,5 +67,10 @@ public class Forms extends AuthBaseClass {
     public void inlineCheckBox(){
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div[3]/div[2]/div/div[2]/form/div[4]/div/label[3]/div/ins");
         getElement(locator).click();
+    }
+    public void navigateToForms(){
+        navigate();
+        navigation.pressOnFormComponents();
+
     }
 }
