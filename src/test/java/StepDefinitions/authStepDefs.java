@@ -6,15 +6,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 public class authStepDefs {
     WebDriver driver;
@@ -23,7 +20,7 @@ public class authStepDefs {
 
     @Given("Navigate to: {string}")
     public void navigateTo(String arg0) {
-        forms.navigate(arg0);
+        forms.navigate();
         System.out.println("This is our URL: " + arg0);
     }
 
@@ -34,11 +31,6 @@ public class authStepDefs {
                 .pollingEvery(5, TimeUnit.SECONDS)
                 .ignoring(NoSuchElementException.class);
     }
-    @After
-    public void shutDownBrowser(){
-        forms.driverClose();
-    }
-
 
     @When("I will click on the email address field and enter keys, {string}")
     public void iWillClickOnTheEmailAddressFieldAndEnterKeys(String arg0) {
