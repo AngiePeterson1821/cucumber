@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import authenticgoods.tables;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,7 +14,7 @@ public class tableStepsDef {
     WebDriver driver;
     Wait<WebDriver> wait;
     tables table = new tables();
-    
+
 
     @Given("Navigate the browser to url: {string}")
     public void navigateTheBrowser(String arg0) {

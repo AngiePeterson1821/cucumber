@@ -6,9 +6,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
-
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.core.IsEqual.equalTo;
 
 public class apiStepDefs {
     protected static RequestSpecification requestSpec;
@@ -52,4 +50,4 @@ public class apiStepDefs {
         System.out.println(response2.then().extract().body().jsonPath().prettify());
         //System.out.println(response2.then().extract().body().path("entries.API").toString());
     }
-    }
+}

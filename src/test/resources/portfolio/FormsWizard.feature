@@ -1,4 +1,5 @@
 Feature: Test Automation for Forms
+
   Scenario Outline: Fillout wizard
 #
 
@@ -18,8 +19,8 @@ Feature: Test Automation for Forms
 #    When check Last name, I see "Last Name"
 
     Examples:
-      |First Name  | Last Name | Street Address| City|State|Zip  |
-      |Test1       | Last1     | 13 Elm St     |SLC  | UT  |84088|
-      |Test2       | Last2     | 13 Elm St A   |SLC  | UT  |84088|
-      |Test3       | Last3     | 13 Elm St B   |SLC  | UT  |84088|
-      |Test4       | Last4     | 13 Elm St C   |SLC  | UT  |84088|
+      | First Name | Last Name | Street Address | City | State | Zip   |
+      | Test1      | Last1     | 13 Elm St      | SLC  | UT    | 84088 |
+      | Test2      | Last2     | 13 Elm St A    | SLC  | UT    | 84088 |
+      | Test3      | Last3     | 13 Elm St B    | SLC  | UT    | 84088 |
+      | Test4      | Last4     | 13 Elm St C    | SLC  | UT    | 84088 |

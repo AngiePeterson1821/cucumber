@@ -16,7 +16,7 @@ public class guiSlidersStepDefs {
 
     @When("Sliders. I navigate to sliders page I check that the header says, {string}")
     public void slidersINavigateToSlidersPageICheckThatTheHeaderSays(String arg0) {
-        Assert.assertEquals(sliders.checkSlidersHeader(arg0),"SLIDERS", "Wrong Page");
+        Assert.assertEquals(sliders.checkSlidersHeader(arg0), "SLIDERS", "Wrong Page");
     }
 
     @Then("I move slider from {string} to {string}")

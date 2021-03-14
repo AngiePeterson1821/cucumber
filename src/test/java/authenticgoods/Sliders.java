@@ -15,12 +15,14 @@ public class Sliders extends CommonStepDefBasePageObject {
     public Sliders() {
         super();
     }
+
     public void dragSlider() {
         WebElement slider = driver.findElement(By.xpath("/html/body/section/section/div[1]/div/section/div/div/div[1]/div/div/div[2]/div/div[1]/div[1]/div[1]/div/div"));
         Actions move = new Actions(driver);
         Action action = (Action) move.dragAndDropBy(slider, 50, 0).build();
         ((Actions) action).perform();
     }
+
     public void slide(int percent) throws InterruptedException {
         By locator = By.cssSelector("[class='slider-selection']");
         By handle = By.cssSelector("[class='slider-handle round']");
@@ -47,7 +49,7 @@ public class Sliders extends CommonStepDefBasePageObject {
         /**
          * parse teh string to get width value.
          */
-        System.out.println(initialPercent.substring(initialPercent.indexOf("width: ") + 7 , initialPercent.length()));
+        System.out.println(initialPercent.substring(initialPercent.indexOf("width: ") + 7, initialPercent.length()));
         /**
          * remove %;
          */

@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import authenticgoods.stepForm;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -29,7 +28,7 @@ public class stepFormDefs {
 
     @Then("I will fill out, {string}")
     public void iWillFillOut(String arg0) {
-    through.setLast(arg0);
+        through.setLast(arg0);
     }
 
     @Then("I will click next")
@@ -41,6 +40,7 @@ public class stepFormDefs {
     public void iWillWaitForSeconds() {
         through.waitForPageLoad();
     }
+
     @When("I get to the second page I will enter address, {string}")
     public void iGetToTheSecondPageIWillEnterAddress(String arg0) {
         through.address(arg0);

@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import authenticgoods.Forms;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,7 +24,7 @@ public class authStepDefs {
     }
 
 
-    public void WaitFor(){
+    public void WaitFor() {
         wait = new FluentWait<WebDriver>(driver)
                 .withTimeout(20, TimeUnit.SECONDS)
                 .pollingEvery(5, TimeUnit.SECONDS)

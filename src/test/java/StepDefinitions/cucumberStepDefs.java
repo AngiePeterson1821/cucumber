@@ -12,11 +12,11 @@ public class cucumberStepDefs {
         List<List<String>> rows = dataTable.asLists(String.class);
         List<Map<String, String>> map_rows = dataTable.asMaps(String.class, String.class);
 
-        for (Map<String, String> map :  map_rows) {
+        for (Map<String, String> map : map_rows) {
             System.out.println(map);
         }
 
     }
 
-    }
+}
 

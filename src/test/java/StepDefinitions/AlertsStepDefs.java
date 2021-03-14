@@ -20,11 +20,11 @@ public class AlertsStepDefs {
 
     @When("I navigate to the Alerts page I check the Header Text")
     public void iNavigateToTheAlertsPageICheckTheHeaderText() {
-        Assert.assertEquals(alerts.checkHeader(),"ANGULAR GROWL NOTIFICATIONS", "Wrong Page");
+        Assert.assertEquals(alerts.checkHeader(), "ANGULAR GROWL NOTIFICATIONS", "Wrong Page");
     }
 
     @After
-    public void close(){
+    public void close() {
         //alerts.driverClose();
     }
 

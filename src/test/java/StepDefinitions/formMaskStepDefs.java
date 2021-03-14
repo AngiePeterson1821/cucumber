@@ -22,7 +22,7 @@ public class formMaskStepDefs {
 
     @Then("FormMask. Verify the text is as entered, {string}")
     public void formmaskVerifyTheTextIsAsEntered(String arg0) {
-        Assert.assertEquals(mask.getDateField(),arg0);
+        Assert.assertEquals(mask.getDateField(), arg0);
 
     }
 }

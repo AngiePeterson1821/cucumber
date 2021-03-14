@@ -18,7 +18,7 @@ public class formsValidationStepDefs {
 
     @When("FormValidation. I navigate to the Form Validation page I verify the header, {string}")
     public void formvalidationINavigateToTheFormValidationPageIVerifyTheHeader(String arg0) {
-        Assert.assertEquals(validate.checkValidationHeader(arg0),"FORM VALIDATIONS", "Wrong Header");
+        Assert.assertEquals(validate.checkValidationHeader(arg0), "FORM VALIDATIONS", "Wrong Header");
     }
 
     @Then("FormValidation. I fill out name field, {string}")
@@ -33,7 +33,7 @@ public class formsValidationStepDefs {
 
     @And("FormValidation. I will verify the error message, {string}")
     public void formvalidationIWillVerifyTheErrorMessage(String arg0) {
-        Assert.assertEquals(validate.usernameError(arg0),"Username is too long.", "Wrong Error");
+        Assert.assertEquals(validate.usernameError(arg0), "Username is too long.", "Wrong Error");
     }
 
     @Then("FormValidation. I will send an incorrectly formatted email, {string}")
@@ -43,7 +43,7 @@ public class formsValidationStepDefs {
 
     @And("FormValidation. I will verify the email error message, {string}")
     public void formvalidationIWillVerifyTheEmailErrorMessage(String arg0) {
-        Assert.assertEquals(validate.emailError(arg0),"Enter a valid email.", "Wrong Error");
+        Assert.assertEquals(validate.emailError(arg0), "Enter a valid email.", "Wrong Error");
     }
 
     @Then("FormValidation. I will clear my username")
@@ -53,7 +53,7 @@ public class formsValidationStepDefs {
 
     @And("FormValidation. I will check username error, {string}")
     public void formvalidationIWillCheckUsernameError(String arg0) {
-        Assert.assertEquals(validate.nameError(arg0),"You name is required.", "Wrong Error");
+        Assert.assertEquals(validate.nameError(arg0), "You name is required.", "Wrong Error");
     }
 
     @Then("FormValidation. I will send correct name, {string}")
@@ -75,6 +75,6 @@ public class formsValidationStepDefs {
 
     @And("FormValidation. I will click submit and check modal message, {string}")
     public void formvalidationIWillClickSubmitAndCheckModalMessage(String arg0) {
-        Assert.assertEquals(validate.submitForm(arg0),"our form is amazing", "Wrong Error");
+        Assert.assertEquals(validate.submitForm(arg0), "our form is amazing", "Wrong Error");
     }
 }

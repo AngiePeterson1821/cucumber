@@ -1,6 +1,7 @@
 Feature: Modals
-Background:
-Given I navigate to the Modals/Popups Page
+
+  Background:
+    Given I navigate to the Modals/Popups Page
 
 
   Scenario: Press and close modals

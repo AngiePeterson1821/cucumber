@@ -1,7 +1,10 @@
 package authenticgoods;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import java.io.File;
@@ -13,13 +16,15 @@ public class tables extends CommonStepDefBasePageObject {
     String[] headerContents = {"Name", "Position", "Office", "Age", "Start date", "Salary"};
 
     public tables() {
-        super(); }
+        super();
+    }
 
-    public void checkPage(){
+    public void checkPage() {
         By locator = By.cssSelector("h1");
         Assert.assertEquals(getClickableElement(locator).getText(), header);
 
     }
+
     public void checkHeader() {
         By locator = By.cssSelector("[role = 'row'] > th");
         /**
@@ -44,36 +49,42 @@ public class tables extends CommonStepDefBasePageObject {
         Assert.assertEquals(actualData, testData);
 
     }
+
     public void printTheTable() {
         By tableLocator = By.cssSelector("[id='example'] >tbody >tr");
         int rows = getElements(tableLocator).size();
         Map<Integer, String> tableContent = new LinkedHashMap<>();
 
-        for (int i=1; i<=rows; i++){
-            for (WebElement element: getElements(tableLocator)){
+        for (int i = 1; i <= rows; i++) {
+            for (WebElement element : getElements(tableLocator)) {
                 tableContent.put(i, element.getText());
             }
         }
         System.out.println(tableContent);
 
     }
-    public void clickTen(){
+
+    public void clickTen() {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/div[1]/div[1]/div/label/select/option[1]");
         getClickableElement(locator).click();
     }
-    public void clickTwentyfive(){
+
+    public void clickTwentyfive() {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/div[1]/div[1]/div/label/select/option[2]");
         getClickableElement(locator).click();
     }
-    public void clickFifty(){
+
+    public void clickFifty() {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/div[1]/div[1]/div/label/select/option[3]");
         getClickableElement(locator).click();
     }
-    public void clickHundo(){
+
+    public void clickHundo() {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/div[1]/div[1]/div/label/select/option[4]");
         getClickableElement(locator).click();
     }
-    public void searchJennifer(String value){
+
+    public void searchJennifer(String value) {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/div[1]/div[2]/div/label/input");
         getClickableElement(locator).sendKeys(value);
     }
@@ -83,19 +94,21 @@ public class tables extends CommonStepDefBasePageObject {
         int rows = getElements(tableLocator).size();
         Map<Integer, String> tableContent = new LinkedHashMap<>();
 
-        for (int i=1; i<=rows; i++){
-            for (WebElement element: getElements(tableLocator)){
+        for (int i = 1; i <= rows; i++) {
+            for (WebElement element : getElements(tableLocator)) {
                 tableContent.put(i, element.getText());
             }
         }
         System.out.println(tableContent);
 
     }
-    public void searchEdinburgh(String value){
+
+    public void searchEdinburgh(String value) {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/div[1]/div[2]/div/label/input");
         getClickableElement(locator).sendKeys(value);
     }
-    public void clearField(){
+
+    public void clearField() {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/div[1]/div[2]/div/label/input");
         getClickableElement(locator).clear();
     }
@@ -105,23 +118,26 @@ public class tables extends CommonStepDefBasePageObject {
         int rows = getElements(tableLocator).size();
         Map<Integer, String> tableContent = new LinkedHashMap<>();
 
-        for (int i=1; i<=rows; i++){
-            for (WebElement element: getElements(tableLocator)){
+        for (int i = 1; i <= rows; i++) {
+            for (WebElement element : getElements(tableLocator)) {
                 tableContent.put(i, element.getText());
             }
         }
         System.out.println(tableContent);
 
     }
-    public void rowCount(){
+
+    public void rowCount() {
         List<WebElement> rows = getElements(By.cssSelector("[id='example'] >tbody >tr"));
         System.out.println(rows.size());
     }
-    public void sortSalary(){
+
+    public void sortSalary() {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div/div[2]/div/table/thead/tr/th[6]");
         getClickableElement(locator).click();
     }
-    public void takeScreenShot(String pathname) throws IOException{
+
+    public void takeScreenShot(String pathname) throws IOException {
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
             FileUtils.copyFile(src, new File(pathname));
@@ -130,7 +146,7 @@ public class tables extends CommonStepDefBasePageObject {
         }
 
 
-        }
     }
+}
 
 

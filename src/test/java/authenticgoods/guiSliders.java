@@ -10,19 +10,22 @@ public class guiSliders extends CommonStepDefBasePageObject {
 
     Navigation navigation = new Navigation();
 
-    public guiSliders(){
+    public guiSliders() {
         super();
     }
-    public void navigateToSliders(){
+
+    public void navigateToSliders() {
         navigate();
         navigation.pressOnSliders();
     }
+
     public String checkSlidersHeader(String arg0) {
         By locator = By.xpath("/html/body/section/section/div[1]/div/section/div/div/div[1]/div/div/div[1]/h3");
         String text = getClickableElement(locator).getText();
         System.out.println("This is our header: " + text);
         return text;
     }
+
     public void slide(int percent) throws InterruptedException {
         By locator = By.xpath("//div[@class='slider slider-default']//div[@class='slider slider-vertical']//div[@class='slider-selection']");
         By handle = By.xpath("//div[@class='slider slider-default']//div[@class='slider slider-vertical']//div[@class='slider-handle round']");
@@ -102,7 +105,7 @@ public class guiSliders extends CommonStepDefBasePageObject {
         /**
          * if we need to decrease the value this is the loop for that
          */
-        for(double i=dArg0; i>dArg1 ; i=i-step){
+        for (double i = dArg0; i > dArg1; i = i - step) {
             dArg0 = dArg0 - step;
             js.executeScript("arguments[0].setAttribute('style', 'top: " + dArg0 + "%')", elementSlider);
             js.executeScript("arguments[0].setAttribute('style', 'top: " + dArg0 + "%')", elementHandle);

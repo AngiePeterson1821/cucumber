@@ -1,6 +1,5 @@
 package authenticgoods;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -33,7 +32,7 @@ public class CommonStepDefBasePageObject {
     }
 
     public void driverClose() {
-        if (driver != null){
+        if (driver != null) {
             driver.quit();
             driver = null;
         }

@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import authenticgoods.Sliders;
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 

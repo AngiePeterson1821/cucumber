@@ -1,7 +1,6 @@
 package StepDefinitions;
 
 import authenticgoods.FormsWizard;
-import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,7 +22,7 @@ public class FormsWizardStepDefs {
 
     @Then("I verify I am on the Form Wizard Page")
     public void iVerifyIAmOnTheFormWizardPage() {
-        Assert.assertEquals(wizard.checkHeader(),"FORM WIZARD", "Wrong Page");
+        Assert.assertEquals(wizard.checkHeader(), "FORM WIZARD", "Wrong Page");
     }
 
 
@@ -46,7 +45,7 @@ public class FormsWizardStepDefs {
     public void getToTheSecondPageIWillEnter(String arg0) {
         wizard.address(arg0);
     }
-    
+
     @Then("I will fill out {string}")
     public void iWillFillOut(String arg0) {
         wizard.city(arg0);

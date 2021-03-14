@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class basicTables extends CommonStepDefBasePageObject{
+public class basicTables extends CommonStepDefBasePageObject {
     String header = "Basic Tables";
     String[] headerContents = {"Name", "Position", "Office", "Age", "Start date", "Salary"};
     Navigation navigation = new Navigation();
@@ -110,7 +110,7 @@ public class basicTables extends CommonStepDefBasePageObject{
         By Locator = By.cssSelector("[id='example'] >tbody >tr >td");
         List<WebElement> cells = getElements(Locator);
         List<String> textFromCells = new ArrayList<>();
-        for (WebElement element : cells){
+        for (WebElement element : cells) {
             textFromCells.add(element.getText());
         }
         return textFromCells;
@@ -130,7 +130,7 @@ public class basicTables extends CommonStepDefBasePageObject{
 
     public List<String> readTestData() {
         List<String> lines = new ArrayList<>();
-        Charset cs= StandardCharsets.UTF_8;
+        Charset cs = StandardCharsets.UTF_8;
         try {
             lines = FileUtils.readLines(new File("src/test/resources/output.txt"), cs);
         } catch (IOException e) {
@@ -155,11 +155,11 @@ public class basicTables extends CommonStepDefBasePageObject{
         List<List<String>> actualData = new ArrayList<>();
         List<String> dataFromRow = new ArrayList<>();
         List<WebElement> listOfCells;
-        for (int i=0; i<rowElement.size(); i++){
-            By genericLocator = By.xpath("/html[1]/body[1]/section[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr["+(i+1)+"]/td");
+        for (int i = 0; i < rowElement.size(); i++) {
+            By genericLocator = By.xpath("/html[1]/body[1]/section[1]/section[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[2]/table[1]/tbody[1]/tr[" + (i + 1) + "]/td");
             listOfCells = getElements(genericLocator);
             dataFromRow.clear();
-            for (int j =0; j<listOfCells.size();j++){
+            for (int j = 0; j < listOfCells.size(); j++) {
                 dataFromRow.add(listOfCells.get(j).getText());
             }
             actualData.add(dataFromRow);

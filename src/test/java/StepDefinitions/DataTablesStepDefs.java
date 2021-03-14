@@ -17,7 +17,7 @@ public class DataTablesStepDefs {
 
     @When("I check if I'm on the Data Tables page")
     public void iCheckIfIMOnTheDataTablesPage() {
-        Assert.assertEquals(dataTable.checkTablesPage(),"DATA TABLES", "This is not our page");
+        Assert.assertEquals(dataTable.checkTablesPage(), "DATA TABLES", "This is not our page");
     }
 
     @Then("I will check the list of elements in the header")

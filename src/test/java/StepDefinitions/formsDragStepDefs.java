@@ -16,7 +16,7 @@ public class formsDragStepDefs {
 
     @When("FormDrag. I get the the Mask page I verify the header, {string}")
     public void formdragIGetTheTheMaskPageIVerifyTheHeader(String arg0) {
-        Assert.assertEquals(drag.checkDragHeader(arg0),"DROPZONE", "Wrong Page");
+        Assert.assertEquals(drag.checkDragHeader(arg0), "DROPZONE", "Wrong Page");
 
     }
 
